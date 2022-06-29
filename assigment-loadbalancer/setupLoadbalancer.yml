@@ -4,6 +4,6 @@
     - name: Upload config file in load balancer
       copy:
         src: ./config/loadbalancer.conf
-        dest: /etc/httpd/conf.d/loadbalancer.conf
+        dest: /etc/apache2/sites-available/000-default.conf
         mode: 0755
       become: true
