@@ -1,0 +1,9 @@
+- name: Copy config file in load balancer
+  hosts: loadbalancer
+  tasks:
+    - name: Upload config file in load balancer
+      copy:
+        src: ./config/loadbalancer.conf
+        dest: /etc/httpd/conf.d/loadbalancer.conf
+        mode: 0755
+      become: true
