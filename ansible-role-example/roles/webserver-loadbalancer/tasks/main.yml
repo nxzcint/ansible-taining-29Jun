@@ -7,14 +7,14 @@
 
 - name: Upload index.php file
   copy:
-    src: ./config/index.php
+    src: index.php
     dest: /var/www/html
-    mode: 07555
+    mode: 0755
   become: true
 
 - name: Upload config file in load balancer
   copy:
-    src: ./config/loadbalancer.conf
+    src: loadbalancer.conf
     dest: /etc/apache2/sites-available/000-default.conf
     mode: 0755
   become: true
