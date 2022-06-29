@@ -1,21 +1,12 @@
 - name: Create users
   hosts:
     - local
+    - web1
+    - web2
   tasks:
     - name: Create Saurabh User
       user:
-        name: saurabh
+        name: "{{ item }}"
         state: present
-      become: true
-
-    - name: Create Gaurav User
-      user:
-        name: Gaurav
-        state: present
-      become: true
-
-    - name: Create Rohan User
-      user:
-        name: Rohan
-        state: present
+      loop: "{{ users }}"
       become: true
