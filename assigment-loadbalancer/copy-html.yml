@@ -6,3 +6,4 @@
         src: ./config/index.php
         dest: /var/www/html
         mode: 0755
+      become: true
