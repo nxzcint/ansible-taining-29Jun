@@ -1,5 +1,11 @@
-- name: Install setup and run webserver with loadbalancer
-  hosts: all
+- name: Setup Webserver
+  hosts: webservers
   roles:
-    - ../roles/webserver-loadbalancer
+    - ../roles/webserver
+  become: true
+
+- name: Setup Loadbalancer
+  hosts: loadbalancer
+  roles:
+    - ../roles/loadbalancer
   become: true
