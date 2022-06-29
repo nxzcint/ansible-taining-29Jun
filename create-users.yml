@@ -1,0 +1,21 @@
+- name: Create users
+  hosts:
+    - local
+  tasks:
+    - name: Create Saurabh User
+      user:
+        name: saurabh
+        state: present
+      become: true
+
+    - name: Create Gaurav User
+      user:
+        name: Gaurav
+        state: present
+      become: true
+
+    - name: Create Rohan User
+      user:
+        name: Rohan
+        state: present
+      become: true
