@@ -1,6 +1,7 @@
 - name: Copy index.php file and move to the server
   hosts: webservers
-  ansible.builtin.copy:
-    src: config/index.php
-    dest: /var/www/html
-    mode: 0755
+  tasks:
+    copy:
+      src: config/index.php
+      dest: /var/www/html
+      mode: 0755
