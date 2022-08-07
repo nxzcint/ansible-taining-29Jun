@@ -2,6 +2,8 @@
   hosts: 
     - web1
     - web2
+    - web3
+    - web4
   vars:
     app: 
       - apache2
