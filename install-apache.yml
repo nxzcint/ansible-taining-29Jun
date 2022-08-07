@@ -1,7 +1,7 @@
 - name: Install Apache on Web server
   hosts: 
-    - web1
-    - web2
+    - ec2-184-73-113-235.compute-1.amazonaws.com
+    - ec2-44-203-184-191.compute-1.amazonaws.com
   vars:
     app: apache2
   tasks:
